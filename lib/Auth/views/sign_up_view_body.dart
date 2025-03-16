@@ -3,6 +3,7 @@ import 'package:advanced_project/Auth/views/widget/custom_auth_with_social.dart'
 import 'package:advanced_project/Auth/views/widget/custom_signup_fields.dart';
 import 'package:advanced_project/Auth/views/widget/custom_text.dart';
 import 'package:advanced_project/utils/app_router.dart';
+import 'package:advanced_project/utils/colors.dart';
 import 'package:advanced_project/utils/custom_snackpar.dart';
 import 'package:advanced_project/widget/custom_button.dart';
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
@@ -83,7 +84,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                   autovalidateMode = AutovalidateMode.always;
                 }
               },
-              color: const Color(0xff572711),
+              color: ColorsMe.primaryback,
               height: MediaQuery.of(context).size.height * 0.065,
               width: MediaQuery.of(context).size.width * 0.75,
               redbl: 22,

@@ -56,15 +56,18 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                 height: MediaQuery.of(context).size.height * 0.025,
               ),
               Form(key: formkey, child: const CustomLoginFields()),
-              Container(
-                margin: const EdgeInsets.only(top: 10, right: 10),
-                alignment: Alignment.centerRight,
-                child: const Text(
-                  "Forget Password ?",
-                  style: TextStyle(
-                    fontSize: 11.5,
-                    color: Colors.black54,
-                    decoration: TextDecoration.underline,
+              InkWell(
+                onTap: () => GoRouter.of(context).push(AppRouter.resetpassword),
+                child: Container(
+                  margin: const EdgeInsets.only(top: 10, right: 10),
+                  alignment: Alignment.centerRight,
+                  child: const Text(
+                    "Forget Password ?",
+                    style: TextStyle(
+                      fontSize: 11.5,
+                      color: Colors.black54,
+                      decoration: TextDecoration.underline,
+                    ),
                   ),
                 ),
               ),

@@ -1,8 +1,13 @@
+import 'package:advanced_project/Auth/model/user_model.dart';
 import 'package:advanced_project/utils/app_router.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
+SharedPreferences? userInfo;
+UserModel? mainuser;
+void main() async {
+   WidgetsFlutterBinding.ensureInitialized();
+   userInfo = await SharedPreferences.getInstance();
   runApp(const MyApp());
 }
 

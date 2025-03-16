@@ -41,7 +41,7 @@ class CustomButton extends StatelessWidget {
                     bottomLeft: Radius.circular(redtl ?? 0),
                     bottomRight: Radius.circular(redbr ?? 0)))),
             overlayColor: WidgetStatePropertyAll(Colors.white.withOpacity(0)),
-            backgroundColor: WidgetStatePropertyAll(side==null? color : Colors.white.withOpacity(0)),
+            backgroundColor: WidgetStatePropertyAll(side==null? color : const Color(0xffFEF7FF) ),
           ),
           child: Container(
             alignment: Alignment.center,
