@@ -6,6 +6,7 @@ import 'package:advanced_project/Auth/views/reset_password_page.dart';
 import 'package:advanced_project/Auth/views/sign_up_view.dart';
 import 'package:advanced_project/Auth/views/welcom_view.dart';
 import 'package:advanced_project/home/home_view.dart';
+import 'package:advanced_project/main_tab_view/main_tab_view.dart';
 import 'package:advanced_project/on_boarding/view/on_boarding_view.dart';
 import 'package:advanced_project/splash_view/splash_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -18,6 +19,7 @@ abstract class AppRouter {
   static const signupview = "/SignUpView";
   static const resetpassword = "/ResetPassword";
   static const onboarding = "/OnBoarding";
+  static const maintabview = "/MainTabView";
 
   static final router = GoRouter(routes: [
     GoRoute(
@@ -56,6 +58,10 @@ abstract class AppRouter {
     GoRoute(
       path: onboarding,
       builder: (context, state) => const OnBoardingView(),
+    ),
+    GoRoute(
+      path: maintabview,
+      builder: (context, state) => const MainTabView(),
     ),
   ]);
 }

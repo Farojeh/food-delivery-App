@@ -59,7 +59,7 @@ class OnBoardingViewBody extends StatelessWidget {
                   CustomButton(
                     onPressed: () {
                       if (state.selectPage >= 2) {
-                        GoRouter.of(context).pushReplacement(AppRouter.homeView);
+                        GoRouter.of(context).pushReplacement(AppRouter.maintabview);
                       } else {
                         cubit.nextPage(state.selectPage);
                       }
