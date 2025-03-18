@@ -55,7 +55,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
           mainuser = UserModel(
               email: userInfo!.getString("email")!,
               password: userInfo!.getString("password")!);
-          GoRouter.of(context).pushReplacement(AppRouter.homeView);
+          GoRouter.of(context).pushReplacement(AppRouter.onboarding);
         }
       },
     );
