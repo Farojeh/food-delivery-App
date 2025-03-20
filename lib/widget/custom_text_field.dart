@@ -43,69 +43,60 @@ class _CustomTextFieldState extends State<CustomTextField> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 2),
-      child: TextFormField(
-        obscureText: widget.obscureText != null ? pv : false,
-        onChanged: widget.onChanged,
-        onSaved: widget.onsaved,
-        validator:(data){
-          if(widget.isname!= null && widget.isname == true){
-            return FormValidators().userNameValidator(data);
-          }else if(widget.isemail!= null && widget.isemail == true){
-             return FormValidators().emailValidator(data);
-          }else if(widget.ispass!= null && widget.ispass == true){
-            return FormValidators().strongPasswordValidator(data);
-          }else if(widget.iscoupon!= null && widget.iscoupon == true){
-            return validat(data);
-          }
-          else {
-            return null ;
-          }
-        },
-        maxLines: widget.maxline,
-        cursorColor: Colors.black,
-        decoration: InputDecoration(
-            filled: true,
-            fillColor: widget.backgroundcolor,
-            hintText: widget.hint,
-            hintStyle: textstyle(),
-            border: widget.inputborder ?? buildborder(Colors.black26, 22),
-            focusedBorder:
-                widget.inputborder ?? buildborder(Colors.black26, 22),
-            enabledBorder:
-                widget.inputborder ?? buildborder(Colors.black26, 22),
-            suffixIcon: widget.obscureText != null
-                ? IconButton(
-                    onPressed: () {
-                      setState(() {
-                        pv = !pv;
-                      });
-                    },
-                    icon: Padding(
-                      padding: const EdgeInsets.only(right: 8),
-                      child: Icon(pv ? Icons.visibility_off : Icons.visibility , color: Colors.black87,),
-                    ))
-                : widget.sufixicon,
-            prefixIcon: widget.prefixIcon != null
-                ? SizedBox(
-                    width: 40,
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 6),
-                      child: Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          Container(
-                            height: 15,
-                            width: 15,
-                            decoration: BoxDecoration(
-                                color: const Color.fromARGB(255, 122, 54, 29),
-                                borderRadius: BorderRadius.circular(40)),
-                          ),
-                          widget.prefixIcon!
-                        ],
+      child: SizedBox(
+        height: 53,
+        child: TextFormField(
+          obscureText: widget.obscureText != null ? pv : false,
+          onChanged: widget.onChanged,
+          onSaved: widget.onsaved,
+          validator:(data){
+            if(widget.isname!= null && widget.isname == true){
+              return FormValidators().userNameValidator(data);
+            }else if(widget.isemail!= null && widget.isemail == true){
+               return FormValidators().emailValidator(data);
+            }else if(widget.ispass!= null && widget.ispass == true){
+              return FormValidators().strongPasswordValidator(data);
+            }else if(widget.iscoupon!= null && widget.iscoupon == true){
+              return validat(data);
+            }
+            else {
+              return null ;
+            }
+          },
+          maxLines: widget.maxline,
+          cursorColor: Colors.black,
+          decoration: InputDecoration(
+              filled: true,
+              fillColor: widget.backgroundcolor,
+              hintText: widget.hint,
+              hintStyle: textstyle(),
+              border: widget.inputborder ?? buildborder(Colors.black26, 22),
+              focusedBorder:
+                  widget.inputborder ?? buildborder(Colors.black26, 22),
+              enabledBorder:
+                  widget.inputborder ?? buildborder(Colors.black26, 22),
+              suffixIcon: widget.obscureText != null
+                  ? IconButton(
+                      onPressed: () {
+                        setState(() {
+                          pv = !pv;
+                        });
+                      },
+                      icon: Padding(
+                        padding: const EdgeInsets.only(right: 8),
+                        child: Icon(pv ? Icons.visibility_off : Icons.visibility , color: Colors.black87,),
+                      ))
+                  : widget.sufixicon,
+              prefixIcon: widget.prefixIcon != null
+                  ? SizedBox(
+                      width: 40,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 15),
+                        child:  widget.prefixIcon!
                       ),
-                    ),
-                  )
-                : null),
+                    )
+                  : null),
+        ),
       ),
     );
   }
