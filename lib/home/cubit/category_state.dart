@@ -56,6 +56,33 @@ class CategoryState {
       "food_type": "Western Food"
     },
   ];
+
+  final List recentArr = [
+    {
+      "image": "assets/images/item_1.png",
+      "name": "Mulberry Pizza by Josh",
+      "rate": "4.9",
+      "rating": "124",
+      "type": "Cafa",
+      "food_type": "Western Food"
+    },
+    {
+      "image": "assets/images/item_2.png",
+      "name": "Barita",
+      "rate": "4.9",
+      "rating": "124",
+      "type": "Cafa",
+      "food_type": "Western Food"
+    },
+    {
+      "image": "assets/images/item_3.png",
+      "name": "Pizza Rush Hour",
+      "rate": "4.9",
+      "rating": "124",
+      "type": "Cafa",
+      "food_type": "Western Food"
+    },
+  ];
   
    CategoryState({this.activeIndex = 1, required this.showcat});
 }

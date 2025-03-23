@@ -3,6 +3,7 @@ import 'package:advanced_project/home/widget/category.dart';
 import 'package:advanced_project/home/widget/location.dart';
 import 'package:advanced_project/home/widget/most_popular.dart';
 import 'package:advanced_project/home/widget/popular_res_widget.dart';
+import 'package:advanced_project/home/widget/recent_item.dart';
 import 'package:advanced_project/home/widget/searh_row.dart';
 import 'package:advanced_project/home/widget/top_home_view.dart';
 import 'package:advanced_project/home/widget/view_all_widget.dart';
@@ -56,6 +57,11 @@ class HomeView extends StatelessWidget {
                 onView: () {},
               ),
               const MostPopular(),
+              ViewAllWidget(
+                title: "Recent Items",
+                onView: () {},
+              ),
+              const RecentItem(),
             ],
           ),
         ),
