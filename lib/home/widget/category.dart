@@ -15,7 +15,7 @@ class Category extends StatelessWidget {
           curve: Curves.easeInOut,
           child: state.showcat
               ? SizedBox(
-                  height: 120,
+                  height: 110,
                   child: ListView.builder(
                     shrinkWrap: true,
                     scrollDirection: Axis.horizontal,
@@ -29,7 +29,7 @@ class Category extends StatelessWidget {
                           child: Column(
                             children: [
                               SizedBox(
-                                height: 85,
+                                height: 75,
                                 width: 85,
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10),
