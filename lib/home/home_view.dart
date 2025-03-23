@@ -1,6 +1,7 @@
 import 'package:advanced_project/home/cubit/category_cubit.dart';
 import 'package:advanced_project/home/widget/category.dart';
 import 'package:advanced_project/home/widget/location.dart';
+import 'package:advanced_project/home/widget/most_popular.dart';
 import 'package:advanced_project/home/widget/popular_res_widget.dart';
 import 'package:advanced_project/home/widget/searh_row.dart';
 import 'package:advanced_project/home/widget/top_home_view.dart';
@@ -18,7 +19,7 @@ class HomeView extends StatelessWidget {
       child: Scaffold(
           body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+          padding: const EdgeInsets.symmetric(vertical: 20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -44,7 +45,17 @@ class HomeView extends StatelessWidget {
                 title: "Popular Restaurants",
                 onView: () {},
               ),
-              const PopularResWidget()
+              const PopularResWidget(),
+              const SizedBox(
+                height: 5,
+              ),
+              ViewAllWidget(
+                top: 7,
+                bottom: 7,
+                title: "Most Popular",
+                onView: () {},
+              ),
+              const MostPopular(),
             ],
           ),
         ),

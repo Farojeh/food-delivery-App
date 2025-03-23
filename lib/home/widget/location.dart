@@ -6,37 +6,40 @@ class Location extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          "Delivering to",
-          style: TextStyle(color: ColorsMe.sectext, fontSize: 11),
-        ),
-        const SizedBox(
-          height: 4,
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Text(
-              "Current Location",
-              style: TextStyle(
-                  color: ColorsMe.sectext,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w700),
-            ),
-            const SizedBox(
-              width: 25,
-            ),
-            Image.asset(
-              "assets/images/dropdown.png",
-              width: 12,
-              height: 12,
-            )
-          ],
-        )
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric( horizontal: 20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            "Delivering to",
+            style: TextStyle(color: ColorsMe.sectext, fontSize: 11),
+          ),
+          const SizedBox(
+            height: 4,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text(
+                "Current Location",
+                style: TextStyle(
+                    color: ColorsMe.sectext,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w700),
+              ),
+              const SizedBox(
+                width: 25,
+              ),
+              Image.asset(
+                "assets/images/dropdown.png",
+                width: 12,
+                height: 12,
+              )
+            ],
+          )
+        ],
+      ),
     );
   }
 }

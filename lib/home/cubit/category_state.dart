@@ -37,6 +37,26 @@ class CategoryState {
     {"image": "assets/images/cat_3.png", "name": "Italian"},
     {"image": "assets/images/cat_4.png", "name": "Indian"},
   ];
+
+ final List mostPopArr = [
+    {
+      "image": "assets/images/m_res_1.png",
+      "name": "Minute by tuk tuk",
+      "rate": "4.9",
+      "rating": "124",
+      "type": "Cafa",
+      "food_type": "Western Food"
+    },
+    {
+      "image": "assets/images/m_res_2.png",
+      "name": "Café de Noir",
+      "rate": "4.9",
+      "rating": "124",
+      "type": "Cafa",
+      "food_type": "Western Food"
+    },
+  ];
+  
    CategoryState({this.activeIndex = 1, required this.showcat});
 }
 

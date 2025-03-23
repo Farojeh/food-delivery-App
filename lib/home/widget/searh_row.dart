@@ -11,32 +11,34 @@ class SearhRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var cubit = context.read<CategoryCubit>();
-    return  Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Container(
-                    width: MediaQuery.of(context).size.width * 0.76,
-                    child: SearchPart()),
-                InkWell(
-                  onTap: () {
-                    cubit.changeshowcat(!cubit.returnshowcat());
-                  },
-                  overlayColor:
-                      WidgetStatePropertyAll(Colors.white.withOpacity(0)),
-                  child: Container(
-                    padding:const EdgeInsets.all(13),
-                    height: 55,
-                    width: MediaQuery.of(context).size.width * 0.13,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: ColorsMe.primary),
-                    child: SvgPicture.asset(
-                      "assets/images/filter.svg",
-                      color: Colors.white,
-                    ),
-                  ),
-                )
-              ],
-            );
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          SizedBox(
+              width: MediaQuery.of(context).size.width * 0.76,
+              child: const SearchPart()),
+          InkWell(
+            onTap: () {
+              cubit.changeshowcat(!cubit.returnshowcat());
+            },
+            overlayColor: WidgetStatePropertyAll(Colors.white.withOpacity(0)),
+            child: Container(
+              padding: const EdgeInsets.all(13),
+              height: 55,
+              width: MediaQuery.of(context).size.width * 0.13,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  color: ColorsMe.primary),
+              child: SvgPicture.asset(
+                "assets/images/filter.svg",
+                color: Colors.white,
+              ),
+            ),
+          )
+        ],
+      ),
+    );
   }
 }

@@ -11,7 +11,7 @@ class ViewAllWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.only(top: top??0 , bottom: bottom??0),
+      padding:  EdgeInsets.only(top: top??0 , bottom: bottom??0 , right: 20 , left: 20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
