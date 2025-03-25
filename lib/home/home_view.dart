@@ -18,6 +18,7 @@ class HomeView extends StatelessWidget {
     return BlocProvider(
       create: (context) => CategoryCubit(),
       child: Scaffold(
+        backgroundColor: Colors.white,
           body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 20),
@@ -27,7 +28,7 @@ class HomeView extends StatelessWidget {
               const SizedBox(
                 height: 15,
               ),
-              const TopHomeView(),
+              const TopHomeView(title: "Good morning Akila",),
               const SizedBox(
                 height: 15,
               ),

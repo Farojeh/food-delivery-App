@@ -2,7 +2,8 @@ import 'package:advanced_project/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class TopHomeView extends StatelessWidget {
-  const TopHomeView({super.key});
+  final String title;
+  const TopHomeView({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,7 @@ class TopHomeView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            "Good morning Akila",
+            title,
             style: TextStyle(
                 color: ColorsMe.primaryText,
                 fontSize: 20,
