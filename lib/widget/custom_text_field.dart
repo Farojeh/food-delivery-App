@@ -18,6 +18,7 @@ class CustomTextField extends StatefulWidget {
   final bool? isemail ;
   final bool? ispass ;
   final bool? iscoupon ;
+  final double? height ;
   const CustomTextField(
       {super.key,
       required this.hint,
@@ -30,7 +31,7 @@ class CustomTextField extends StatefulWidget {
       this.backgroundcolor,
       this.hintcolor,
       this.hintsize,
-      this.obscureText, this.isname, this.isemail, this.ispass, this.iscoupon});
+      this.obscureText, this.isname, this.isemail, this.ispass, this.iscoupon, this.height});
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -44,7 +45,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 2),
       child: SizedBox(
-        height: 53,
+        height:widget.height??null,
         child: TextFormField(
           obscureText: widget.obscureText != null ? pv : false,
           onChanged: widget.onChanged,

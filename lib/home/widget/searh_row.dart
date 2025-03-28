@@ -18,7 +18,7 @@ class SearhRow extends StatelessWidget {
         children: [
           SizedBox(
               width: MediaQuery.of(context).size.width * 0.76,
-              child: const SearchPart()),
+              child: SearchPart(height: 53,color:const Color.fromARGB(255, 219, 219, 219).withOpacity(0.4),)),
           InkWell(
             onTap: () {
               cubit.changeshowcat(!cubit.returnshowcat());

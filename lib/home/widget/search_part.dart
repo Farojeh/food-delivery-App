@@ -2,7 +2,9 @@ import 'package:advanced_project/widget/custom_text_field.dart';
 import 'package:flutter/material.dart';
 
 class SearchPart extends StatelessWidget {
-  const SearchPart({super.key});
+  final double? height;
+  final Color color ;
+  const SearchPart({super.key, this.height, required this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -11,6 +13,7 @@ class SearchPart extends StatelessWidget {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
         elevation: 0,
         child: CustomTextField(
+          height: height,
           onChanged: (value) {},
           prefixIcon: const Padding(
             padding: EdgeInsets.only(right: 10),
@@ -31,7 +34,7 @@ class SearchPart extends StatelessWidget {
           hint: "  Search what you want",
           hintcolor: Colors.black54,
           hintsize: 13,
-          backgroundcolor: Color.fromARGB(255, 219, 219, 219).withOpacity(0.4),
+          backgroundcolor:color,
         ));
   }
 }

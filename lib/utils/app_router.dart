@@ -5,6 +5,8 @@ import 'package:advanced_project/Auth/views/loginview.dart';
 import 'package:advanced_project/Auth/views/reset_password_page.dart';
 import 'package:advanced_project/Auth/views/sign_up_view.dart';
 import 'package:advanced_project/Auth/views/welcom_view.dart';
+import 'package:advanced_project/Menu_view/controller/menu_item.dart';
+import 'package:advanced_project/Menu_view/menu_item_view.dart';
 import 'package:advanced_project/home/home_view.dart';
 import 'package:advanced_project/main_tab_view/main_tab_view.dart';
 import 'package:advanced_project/on_boarding/view/on_boarding_view.dart';
@@ -20,6 +22,7 @@ abstract class AppRouter {
   static const resetpassword = "/ResetPassword";
   static const onboarding = "/OnBoarding";
   static const maintabview = "/MainTabView";
+  static const menuitemview = "/MunuItemView";
 
   static final router = GoRouter(routes: [
     GoRoute(
@@ -62,6 +65,10 @@ abstract class AppRouter {
     GoRoute(
       path: maintabview,
       builder: (context, state) => const MainTabView(),
+    ),
+     GoRoute(
+      path: menuitemview,
+      builder: (context, state) => MenuItemView(menuItem: state.extra as MenuItem,),
     ),
   ]);
 }
